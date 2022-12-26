@@ -8,9 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\search.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="GlobalDataBase\" />
     <Folder Include="LocalDatabase\" />
     <Folder Include="ProxyDesignPattern\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\search.png" />
   </ItemGroup>
 
 </Project>

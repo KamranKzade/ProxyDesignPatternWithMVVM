@@ -6,9 +6,89 @@
         xmlns:local="clr-namespace:ProxyDesignPattern"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="450"
-        Width="800">
-    <Grid>
-        
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Height="600"
+        Width="750">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#00F260" Offset="0"/>
+            <GradientStop Color="#0575E6" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid Name="myGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Evvelceden axtarilan Sozler"
+                   HorizontalContentAlignment="Center"
+                   Foreground="Yellow"
+                   FontSize="22"
+                   FontWeight="Medium"
+                   />
+
+            <Border Grid.Row="1"
+                    BorderBrush="Red"
+                    BorderThickness="2">
+                <ScrollViewer VerticalScrollBarVisibility="Visible">
+                    <ListBox Grid.Row="1"
+                             Name="AxtarilanSoz"
+                             Foreground="SpringGreen"
+                             FontSize="14"
+                             FontWeight="Normal"/>
+
+                </ScrollViewer>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0 5 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Text="Search Text"
+                     Name="TextBox"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     FontSize="25"
+                     Foreground="Pink"
+                     Background="Black"
+                     />
+
+            <Button Grid.Column="1"
+                    Foreground="Red"
+                    FontSize="32"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Command="{Binding SearchCommand}"
+                    CommandParameter="{Binding ElementName=myGrid}"
+                    FontWeight="Bold">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/search.png"
+                                Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <ListBox Name="DataBaseListBox"
+                     Foreground="Blue"
+                     FontSize="14"
+                     FontWeight="Normal"/>
+        </ScrollViewer>
+
+
+
     </Grid>
 </Window>
