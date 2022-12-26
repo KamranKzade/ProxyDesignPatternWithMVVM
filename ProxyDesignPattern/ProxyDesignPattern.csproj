@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="File\" />
+    <Folder Include="GlobalDataBase\" />
+    <Folder Include="LocalDatabase\" />
     <Folder Include="ProxyDesignPattern\" />
   </ItemGroup>
 
