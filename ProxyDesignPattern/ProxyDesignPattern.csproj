@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="GlobalDataBase\" />
-    <Folder Include="LocalDatabase\" />
-    <Folder Include="ProxyDesignPattern\" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
   </ItemGroup>
 
   <ItemGroup>

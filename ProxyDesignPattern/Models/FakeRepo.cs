@@ -7,8 +7,9 @@ namespace ProxyDesignPattern.Models;
 
 public class FakeRepo
 {
-    public static List<string> GetDatas()
+    public static List<string> GetAllData()
     {
-        return File.ReadAllText("../../../GlobalDataBase/Words.txt").Split("\n").ToList();
+        return File.ReadAllText("../../../DataBase/Words.txt").Split("\n").ToList();
     }
+
 }
