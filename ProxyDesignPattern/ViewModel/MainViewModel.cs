@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Windows.Controls;
 using ProxyDesignPattern.DesignPattern;
+using System.IO;
+using ProxyDesignPattern.Models;
 
 namespace ProxyDesignPattern.ViewModel;
 
@@ -34,7 +36,6 @@ public class MainViewModel : BaseViewModel
             listbox!.ItemsSource = string.Empty;
             AlreadySearched.Add(data);
             listbox!.ItemsSource = AlreadySearched;
-
         });
 
 

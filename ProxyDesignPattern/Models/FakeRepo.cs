@@ -12,4 +12,9 @@ public class FakeRepo
         return File.ReadAllText("../../../DataBase/Words.txt").Split("\n").ToList();
     }
 
+    public static List<string> GetDataBaseForME()
+    {
+        return File.ReadAllText("../../../DataBase/DataBaseForME.txt").Split("\n").ToList();
+    }
+
 }
